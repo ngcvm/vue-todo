@@ -1,4 +1,4 @@
-name: "Run test"
+name: Run end to end tests
 on: 
   push:
     branches: [main]
@@ -17,6 +17,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+
+      - name: Install dependencies
+        run: yarn
       - name: Run test
         run: yarn test:e2e
       - run: echo "🍏 This job's status is ${{ job.status }}."
