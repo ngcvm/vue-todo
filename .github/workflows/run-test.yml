@@ -6,7 +6,7 @@ on:
     branches: [development]
 
 jobs:
-  Run test on development push:
+  run_e2e_test:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Run test"
