@@ -1,0 +1,25 @@
+name: Run end to end tests
+on: 
+  # push: // Disable this because we have run test in Netlify
+  #   branches: [main]
+  pull_request:
+    branches: [development]
+
+jobs:
+  run_e2e_test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Run test"
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+
+      - name: Install dependencies
+        run: yarn
+      - name: Run test
+        run: yarn test:e2e
+      - run: echo "🍏 This job's status is ${{ job.status }}."
