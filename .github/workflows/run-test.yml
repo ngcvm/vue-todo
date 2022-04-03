@@ -1,7 +1,7 @@
 name: Run end to end tests
 on: 
-  push:
-    branches: [main]
+  # push: // Disable this because we have run test in Netlify
+  #   branches: [main]
   pull_request:
     branches: [development]
 
