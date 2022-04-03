@@ -1,0 +1,12 @@
+{
+ "projectId": "ngcvm996",
+  "integrationFolder": "cypress/tests",
+  "viewportHeight": 1000,
+  "viewportWidth": 1280,
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "env": {},
+  "experimentStudio": true
+}
