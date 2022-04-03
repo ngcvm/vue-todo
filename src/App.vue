@@ -34,14 +34,12 @@
     </div>
   </Popover>
   <section>
-    <router-view/>
+    <router-view />
   </section>
 </template>
 
 <script lang="ts">
-import {
-  Popover,
-} from "@headlessui/vue";
+import { Popover } from "@headlessui/vue";
 import { HomeIcon, RefreshIcon } from "@heroicons/vue/outline";
 
 export default {
